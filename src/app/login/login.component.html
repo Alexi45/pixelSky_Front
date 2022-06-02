@@ -1,0 +1,21 @@
+<br>
+
+<div class='at-container'>
+    <h1 class='at-item'>Inicio de sesion
+    </h1>
+</div>
+
+<div class="login-page">
+    <div class="form at-dd">
+
+        <form class="login-form" [formGroup]="userForm">
+            <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
+            <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
+
+            <div id="fallo" *ngIf="loginFailed" class="alert">Datos incorrectos </div>
+            <button type="button" id="btn-neon" (click)="iniciarSession()">Iniciar
+        sesion</button>
+            <p class="message">¿No tienes cuenta? <a href="/search">Crea una cuenta</a></p>
+        </form>
+    </div>
+</div>

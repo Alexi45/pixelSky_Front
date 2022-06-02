@@ -1,0 +1,23 @@
+<!-- Barra de navegacion y banner
+<div class="eg">
+<app-menu></app-menu>
+</div>-->
+
+
+
+<app-menu></app-menu>
+<div id="fondito" class="">
+
+    <!--
+Routing para que Angular nos coloque los apartados correspondientes -->
+
+    <router-outlet></router-outlet>
+    <!-- animacion para el boton de subida -->
+
+    <button id="back-to-top" class="btn btn-light btn-lg back-to-top" (click)="animation2()" role="button" style="display: inline;">
+    <i class="fas fa-chevron-up"></i></button>
+</div>
+
+<!-- footer de la pagina web -->
+
+<app-footer></app-footer>

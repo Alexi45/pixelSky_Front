@@ -1,0 +1,14 @@
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    color: white;
+    background-color: black;
+}
+
+
+/*
+.eg{
+  padding: 50px;
+}*/

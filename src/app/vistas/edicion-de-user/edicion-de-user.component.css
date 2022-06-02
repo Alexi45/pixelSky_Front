@@ -1,0 +1,213 @@
+.at-dd {
+    animation-name: scale-up-center;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(2, 1, 1);
+    text-shadow: 0 0 5px rgb(183, 186, 233), 0 0 10px rgb(230, 67, 145), 0 0 20px rgb(35, 47, 224), 0 0 40px rgb(228, 80, 247), 0 0 80px rgb(121, 189, 33), 0 0 90px rgb(36, 51, 184), 0 0 100px rgb(57, 38, 127), 0 0 140px rgb(38, 59, 127), 0 0 180px rgb(30, 33, 223);
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.boton-neon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 0;
+    color: #165C5A;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-out 200ms;
+    animation: efecto-texto-luz 3s ease-in infinite normal both;
+}
+
+.boton-neon:hover {
+    color: #99f133;
+    text-shadow: 0 0 3px #99f133;
+    animation: none !important;
+}
+
+.boton-neon::after,
+.boton-neon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -3px;
+    top: -3px;
+    border: 3px solid #165C5A;
+    border-radius: 8px;
+    transition: all ease-out 200ms;
+    animation: efecto-luz 3s ease-in infinite normal both;
+}
+
+.boton-neon:hover::before,
+.boton-neon:hover::after {
+    border-color: #99f133;
+    animation: none !important;
+}
+
+.boton-neon:hover::before {
+    filter: blur(4px);
+}
+
+.boton-neon:active {
+    color: #165C5A;
+    text-shadow: 0 0 0 #165c22;
+}
+
+.boton-neon:active::before,
+.boton-neon:active::after {
+    border-color: #165C5A;
+    animation: none !important;
+}
+
+@keyframes efecto-texto-luz {
+    from,
+    20%,
+    36%,
+    to {
+        color: #245c16;
+    }
+    23% {
+        color: #99f133;
+    }
+}
+
+@keyframes efecto-luz {
+    from,
+    60%,
+    70%,
+    95% {
+        border-color: #245c16;
+    }
+    65%,
+    to {
+        border-color: #99f133;
+    }
+}
+
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+body {
+    background: white;
+}
+
+svg {
+    width: 510px;
+    text-align: center;
+    height: 140px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    color: white;
+}
+
+g {
+    text-align: center;
+}
+
+text {
+    text-align: center;
+}
+
+.boton-neons {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 0;
+    color: #165C5A;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-out 200ms;
+    animation: efecto-texto-luzs 3s ease-in infinite normal both;
+}
+
+.boton-neons:hover {
+    color: #f1af33;
+    text-shadow: 0 0 3px #f1af33;
+    animation: none !important;
+}
+
+.boton-neons::after,
+.boton-neons::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -3px;
+    top: -3px;
+    border: 3px solid #5c2416;
+    border-radius: 8px;
+    transition: all ease-out 200ms;
+    animation: efecto-luzs 3s ease-in infinite normal both;
+}
+
+.boton-neons:hover::before,
+.boton-neons:hover::after {
+    border-color: #f1af33;
+    animation: none !important;
+}
+
+.boton-neons:hover::before {
+    filter: blur(4px);
+}
+
+.boton-neons:active {
+    color: #5c2416;
+    text-shadow: 0 0 0 #5c1b16;
+}
+
+.boton-neons:active::before,
+.boton-neons:active::after {
+    border-color: #5c2416;
+    animation: none !important;
+}
+
+@keyframes efecto-texto-luzs {
+    from,
+    20%,
+    36%,
+    to {
+        color: #5c2416;
+    }
+    23% {
+        color: #f1af33;
+    }
+}
+
+@keyframes efecto-luzs {
+    from,
+    60%,
+    70%,
+    95% {
+        border-color: #5c2416;
+    }
+    65%,
+    to {
+        border-color: #f1af33;
+    }
+}

@@ -1,0 +1,111 @@
+
+p{
+	font-weight: bolder;
+
+  text-align: justify;
+  animation-duration: 3s;
+	  animation-name: slidein;
+  }
+
+
+
+
+	@keyframes slidein {
+	  from {
+		margin-left: 100%;
+		width: 300%
+	  }
+
+	  to {
+		margin-left: 0%;
+		width: 100%;
+	  }
+	}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+
+svg {
+    display: block;
+    font: 10.5em 'Politica';
+
+
+}
+.text{
+
+
+  text-align: center;
+}
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #0f38f0;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #06a0dd;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #12f3f3;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #5109fa;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #142bfc;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+div.at-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+  }
+  .at-item {
+    font-family:'Franklin Gothic Medium';
+	color: #010203;
+	animation-name: focus-in-zoomout;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	/* shorthand
+	animation: focus-in-zoomout 1s ease 0s 1 normal none;
+	*/
+  }
+  @keyframes focus-in-zoomout {
+	0%{
+	  letter-spacing: 1em;
+	  transform: translateY(300px);
+	  filter: blur(12px);
+	  opacity: 0;
+	}
+	100%{
+	  transform: translateY(0px);
+	  filter: blur(0);
+	  opacity: 1;
+	}
+  }

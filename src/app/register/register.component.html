@@ -1,0 +1,38 @@
+<br>
+<!--
+<p class="textoformulario">Formulario de Registro</p> -->
+<div class='at-container'>
+    <h1 class='at-item'>Registro de usuario
+    </h1>
+</div>
+<div class="login-page">
+    <div class="form at-dd">
+
+        <form class="login-form" [formGroup]="userForm">
+            <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
+            <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
+            <input type="text" formControlName="email" required maxlength="30" placeholder="Email" />
+            <input type="text" formControlName="phone" required maxlength="30" placeholder="Telefono" />
+
+            <div id="fallo" *ngIf="loginFailed" class="alert">Usuario existente </div>
+            <button type="button" (click)="register()">Registrarse</button>
+            <p class="message">¿Te has equivocado? <a href="/search">Vuelve al inicio</a></p>
+        </form>
+    </div>
+</div>
+<div class="wrapper">
+    <form class="login" [formGroup]="userForm">
+        <p class="title">Registro</p>
+        <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
+        <i class="fa fa-user"></i>
+        <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
+        <i class="fa fa-key"></i>
+        <a href="#">Forgot your password?</a>
+        <button (click)="register()">
+      <i class="spinner"></i>
+      <span class="state">Log in</span>
+    </button>
+    </form>
+    <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
+
+</div>
