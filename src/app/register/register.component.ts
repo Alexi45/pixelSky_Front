@@ -48,8 +48,9 @@ if(this.validarUsername() && this.validarPassword() && this.validarPhone() && th
       if (data == "guardado") {
         console.log("si")
         Swal.fire('Registro exitoso', '', 'success').then(() =>{
-          this.router.navigate(['/home'])
-          window.location.reload();
+          this.router.navigate(['/home']).then(()=>{
+
+          window.location.reload();})
         })
 
 
