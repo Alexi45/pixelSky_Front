@@ -17,9 +17,10 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { HomeComponent } from './home/home.component';
 import { Easteregg1Component } from './easteregg1/easteregg1.component';
 import { EdicionDeUserComponent } from './vistas/edicion-de-user/edicion-de-user.component';
+import { ZonaDescargasComponent } from './vistas/zona-descargas/zona-descargas.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-
+  { path: 'downloads', component: ZonaDescargasComponent },
   { path: 'egg1', component: Easteregg1Component },
 
   { path: 'perfilUser', component: PerfilComponent },

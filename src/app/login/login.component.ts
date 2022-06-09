@@ -7,6 +7,7 @@ import { LoginService } from 'src/app/services/login.service';
 import { FormGroup } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import swal from'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,36 +35,40 @@ export class LoginComponent implements OnInit {
     this.user.name=this.userForm.get('name')?.value
     this.user.password=this.userForm.get('password')?.value
 
+if(this.validarUsername() && this.validarPassword()){
+
 
     this.loginservice.login(this.user).subscribe((data) => {
-
-
-
-
 
       if (data == "funciono") {
         console.log("si")
 
         localStorage.setItem('nombreUsuario', this.userForm.get('name')?.value);
         localStorage.setItem('miTokenPersonal', `${data}`);
-        window.alert("¡¡Has iniciado sesión satisfactoriamente!!")
-        this.router.navigate(["/", "home"]).then(() => {
-          window.location.reload();
-        });
+
+
+        swal.fire('Inicio de sesion exitoso', '', 'success').then(() =>{
+          this.router.navigate(['/home']).then(()=>{
+            window.location.reload()
+          })
+
+        })
+
 
 
       } else {
-this.userForm.setValue({'name':'','password':''})
-this.loginFailed=true
-        console.log("no funciona")
+      this.userForm.setValue({'name':'','password':''})
+      swal.fire('Datos incorrectos', '', 'error')
+      this.loginFailed=true
+      console.log("no funciona")
 
       }
 
     })
 
+}
 
   }
-
 
   ngOnInit(): void {
 
@@ -73,5 +78,30 @@ this.loginFailed=true
       }
     })
   }
+
+  validarUsername() {
+    var alertZ = document.getElementById('usernameError');
+    if ((<HTMLButtonElement>document.getElementById('username')).value.length == 0) {
+      alertZ!.innerText = "Debes completar este campo*";
+    } else {
+      alertZ!.innerText = "";
+      return true;
+    }
+
+
+  }
+
+  validarPassword() {
+    var alertZ = document.getElementById('passwordError');
+    if ((<HTMLButtonElement>document.getElementById('password')).value.length == 0) {
+      alertZ!.innerText = "Debes completar este campo*";
+    } else {
+      alertZ!.innerText = "";
+      return true;
+    }
+
+
+  }
+
 
 }

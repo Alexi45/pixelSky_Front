@@ -9,13 +9,7 @@ export class LoginService {
 
   constructor(private httpClient:HttpClient) {
 
-
    }
-public detail(id: number): Observable<User> {
-    return this.httpClient.get<User>(`http://localhost:8080/api/detail/${id}`);
-  }
-
-
 
 public update(id: number, user: User): Observable<any> {
     return this.httpClient.put<any>(`http://localhost:8080/api/update/${id}`, user);
@@ -28,8 +22,7 @@ public login(user:User):Observable<any>{
 
 }
 
-
-getEmployeeById(id: number): Observable<User>{
+getUserID(id: number): Observable<User>{
   return this.httpClient.get<User>(`http://localhost:8080/api/users/${id}`);
 }
 

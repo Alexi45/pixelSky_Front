@@ -21,9 +21,30 @@ body {
     align-items: center;
 }
 
-.gugu {
-    margin-right: 10px;
-    margin-left: 10px;
+.at-dd {
+    animation-name: scale-up-center;
+    margin-left: 3px;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ima {
+    padding-top: 20px;
+    width: 30px;
+    height: 300px;
 }
 
 .boton-neon {
@@ -116,6 +137,7 @@ body {
 
 svg {
     width: 510px;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     height: 140px;
     display: block;
@@ -131,4 +153,10 @@ g {
 
 text {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
 }

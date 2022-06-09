@@ -1,21 +1,19 @@
-<br>
+<div class="wrapper at-dd">
+    <br>
+    <form class="login at-dd" [formGroup]="userForm">
+        <p class="title">Inicio de sesión</p>
+        <input type="text" formControlName="name" required maxlength="30" id="username" (change)="validarUsername()" required placeholder="Nombre" />
+        <i class="fa fa-user"></i>
+        <p id="usernameError" style="color: red;"></p>
+        <input type="password" formControlName="password" required maxlength="15" (change)="validarPassword()" required id="password" placeholder="Contraseña" />
+        <i class="fa fa-key"></i>
+        <p id="passwordError" style="color: red;"></p>
 
-<div class='at-container'>
-    <h1 class='at-item'>Inicio de sesion
-    </h1>
-</div>
+        <div id="fallo" *ngIf="loginFailed" class="alert" style="color: red; text-align: center;">Porfavor introduzca datos validos* </div>
+        <a href="/register">¿No estas registrado?</a>
+        <button class="btn btn-info btn-block boton-neon" (click)="iniciarSession();validarUsername();validarPassword()"><span> Iniciar sesión</span></button>
 
-<div class="login-page">
-    <div class="form at-dd">
+    </form>
 
-        <form class="login-form" [formGroup]="userForm">
-            <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
-            <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
-
-            <div id="fallo" *ngIf="loginFailed" class="alert">Datos incorrectos </div>
-            <button type="button" id="btn-neon" (click)="iniciarSession()">Iniciar
-        sesion</button>
-            <p class="message">¿No tienes cuenta? <a href="/search">Crea una cuenta</a></p>
-        </form>
-    </div>
+    <br>
 </div>

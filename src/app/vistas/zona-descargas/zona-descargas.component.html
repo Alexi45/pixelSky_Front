@@ -1,6 +1,4 @@
-<br>
-<br>
-<div class="col-md-6 offset-md-3">
+<div class="container">
     <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="100px" viewBox="0 0 600 100">
     <style type="text/css">
 
@@ -94,33 +92,8 @@
       </defs>
 
     <g>
-      <text x="60" y="60">Edición de usuario</text>
+      <text x="60" y="60">Descargar Juego </text>
     </g>
     </svg>
-
-    <div class="form-group">
-        <label> Telefono</label>
-        <input type="number" class="form-control no-arrow" id="phone" (change)="validarPhone()" [(ngModel)]="user.phone" name="phone">
-        <p id="phoneError" style="color: red;"></p>
-    </div>
-    <div class="form-group">
-        <label> Foto de perfil con URL</label>
-        <input type="text" class="form-control" id="urlPerfil" (change)="validarUrl()" [(ngModel)]="user.url" name="urlPerfil">
-        <p id="urlError" style="color: red;"></p>
-    </div>
-    <div class="form-group">
-        <label> Contraseña</label>
-        <input type="text" class="form-control" id="password" (change)="validarPassword()" [(ngModel)]="user.password" name="password">
-        <p id="passwordError" style="color: red;"></p>
-    </div>
-
-
-
-
-
-    <button class="btn btn-success  btn-block boton-neon" (click)="onUpdate();validarPhone();validarUrl();validarPassword()" type="button">Guardar</button>
-
-    <button class="btn btn-danger  btn-block boton-neons" routerLink="/perfilUser" type="button">Cancelar</button>
-
+    <button class="btn " style="width:500px ;height:150px; align-items: center;"><a class="fa fa-download" href="https://drive.google.com/uc?export=download&id=1bgmpGCyfyNyBYmlNaU70uMVebk0vF7PX"></a> Descargar</button>
 </div>
-<br>

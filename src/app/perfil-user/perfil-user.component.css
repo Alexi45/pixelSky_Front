@@ -6,6 +6,8 @@
 #imagem {
     float: left;
     width: 27%;
+    height: 270px;
+    margin-bottom: 30px;
 }
 
 #icone {
@@ -170,29 +172,4 @@ body {
     to {
         border-color: #38EDE8;
     }
-}
-
-@import "compass/css3";
-@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
-body {
-    background: white;
-}
-
-svg {
-    width: 510px;
-    text-align: center;
-    height: 140px;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    color: white;
-}
-
-g {
-    text-align: center;
-}
-
-text {
-    text-align: center;
 }

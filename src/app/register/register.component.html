@@ -1,38 +1,20 @@
-<br>
-<!--
-<p class="textoformulario">Formulario de Registro</p> -->
-<div class='at-container'>
-    <h1 class='at-item'>Registro de usuario
-    </h1>
-</div>
-<div class="login-page">
-    <div class="form at-dd">
-
-        <form class="login-form" [formGroup]="userForm">
-            <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
-            <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
-            <input type="text" formControlName="email" required maxlength="30" placeholder="Email" />
-            <input type="text" formControlName="phone" required maxlength="30" placeholder="Telefono" />
-
-            <div id="fallo" *ngIf="loginFailed" class="alert">Usuario existente </div>
-            <button type="button" (click)="register()">Registrarse</button>
-            <p class="message">¿Te has equivocado? <a href="/search">Vuelve al inicio</a></p>
-        </form>
-    </div>
-</div>
-<div class="wrapper">
-    <form class="login" [formGroup]="userForm">
-        <p class="title">Registro</p>
-        <input type="text" formControlName="name" required maxlength="30" placeholder="Nombre" />
+<div class="wrapper at-dd">
+    <br>
+    <form class="login at-dd" [formGroup]="userForm">
+        <p class="title">Registro de usuario</p>
+        <input type="text" formControlName="name" required maxlength="30" id="username" (change)="validarUsername()" required placeholder="Nombre" />
         <i class="fa fa-user"></i>
-        <input type="password" formControlName="password" required maxlength="15" placeholder="Contraseña" />
+        <p id="usernameError" style="color: red;"></p>
+        <input type="password" formControlName="password" required maxlength="15" (change)="validarPassword()" required id="password" placeholder="Contraseña" />
         <i class="fa fa-key"></i>
-        <a href="#">Forgot your password?</a>
-        <button (click)="register()">
-      <i class="spinner"></i>
-      <span class="state">Log in</span>
-    </button>
+        <p id="passwordError" style="color: red;"></p>
+        <input type="number" class="no-arrow" formControlName="phone" required maxlength="30" id="phone" (change)="validarPhone()" placeholder="Telefono" />
+        <i class="fa fa-phone"></i>
+        <p id="phoneError" style="color: red;"></p>
+        <input type="text" formControlName="email" id="email" (change)="validarMail2()" required maxlength="10" placeholder="Email" />
+        <i class="fa fa-mail-forward"></i>
+        <p id="emailError" style="color: red;"></p>
+        <button class="btn btn-info btn-block boton-neon" (click)="register();validarUsername();validarPassword();validarPhone();validarMail2()"><span> Registrarse</span></button>
     </form>
-    <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
-
+    <br>
 </div>

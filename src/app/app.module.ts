@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { RegisterComponent } from './register/register.component';
-
+import swal from'sweetalert2';
 import { MenuComponent } from './barra-Navegacion/barra-Navegacion.component';
-
+import Swal from 'sweetalert2';
 import { FooterComponent } from './footer/footer.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { InformacionComponent } from './informacion/informacion.component';
@@ -22,6 +22,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { HomeComponent } from './home/home.component';
 import { EdicionDeUserComponent } from './vistas/edicion-de-user/edicion-de-user.component';
 import { Easteregg1Component } from './easteregg1/easteregg1.component';
+import { ZonaDescargasComponent } from './vistas/zona-descargas/zona-descargas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { Easteregg1Component } from './easteregg1/easteregg1.component';
     PerfilComponent,
     HomeComponent,
     EdicionDeUserComponent,
-    Easteregg1Component
+    Easteregg1Component,
+    ZonaDescargasComponent
   ],
   imports: [
     FormsModule,

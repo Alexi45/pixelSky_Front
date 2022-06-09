@@ -1,87 +1,81 @@
 div.at-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-
-width: auto;
-  }
-  .at-item {
-    font-family:'Franklin Gothic Medium';
-    border-radius: 2%;
-	color: #050303;
-	animation-name: focus-in-zoomout;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-
-	animation-fill-mode: none;
-
-  }
-  @keyframes focus-in-zoomout {
-	0%{
-	  letter-spacing: 1em;
-	  transform: translateY(300px);
-	  filter: blur(12px);
-	  opacity: 0;
-	}
-	100%{
-	  transform: translateY(0px);
-	  filter: blur(0);
-	  opacity: 1;
-	}
-  }
-
-
-
-
-
-
-
-
-
-
-
-p{
-  font-weight: bolder;
-
-text-align: justify;
-animation-duration: 3s;
-	animation-name: slidein;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
 }
 
+.at-dd {
+    animation-name: scale-up-center;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    /* shorthand
+animation: scale-up-center 1s ease 0s 1 normal none;
+*/
+}
 
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+@keyframes focus-in-zoomout {
+    0% {
+        letter-spacing: 1em;
+        transform: translateY(300px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
 
-  @keyframes slidein {
-	from {
-	  margin-left: 100%;
-	  width: 300%
-	}
+.about-section {
+    padding: 50px;
+    text-align: justify;
+    background-color: #e8eefd;
+    color: rgb(3, 3, 3);
+}
 
-	to {
-	  margin-left: 0%;
-	  width: 100%;
-	}
-  }
+p {
+    font-weight: bolder;
+    text-align: justify;
+    animation-duration: 3s;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-
-
 svg {
     display: block;
     font: 10.5em 'Politica';
-
-
 }
-.text{
 
-
-  text-align: center;
+.text {
+    text-align: center;
 }
+
 .text-copy {
     fill: none;
     stroke: white;
@@ -91,31 +85,33 @@ svg {
     animation: stroke-offset 5.5s infinite linear;
 }
 
-.text-copy:nth-child(1){
-	stroke: #0f38f0;
-	animation-delay: -1;
+.text-copy:nth-child(1) {
+    stroke: #57C3EA;
+    animation-delay: -1;
 }
 
-.text-copy:nth-child(2){
-	stroke: #06a0dd;
-	animation-delay: -2s;
+.text-copy:nth-child(2) {
+    stroke: #06a0dd;
+    animation-delay: -2s;
 }
 
-.text-copy:nth-child(3){
-	stroke: #12f3f3;
-	animation-delay: -3s;
+.text-copy:nth-child(3) {
+    stroke: #0a789c;
+    animation-delay: -3s;
 }
 
-.text-copy:nth-child(4){
-	stroke: #5109fa;
-	animation-delay: -4s;
+.text-copy:nth-child(4) {
+    stroke: #0955fa;
+    animation-delay: -4s;
 }
 
-.text-copy:nth-child(5){
-	stroke: #142bfc;
-	animation-delay: -5s;
+.text-copy:nth-child(5) {
+    stroke: #1493D6;
+    animation-delay: -5s;
 }
 
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
 }

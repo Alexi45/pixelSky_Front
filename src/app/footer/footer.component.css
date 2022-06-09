@@ -12,7 +12,7 @@
 footer {
     width: 100%;
     background: #0099CC;
-    background: linear-gradient(to bottom, #1BB4CC, #140000);
+    background: linear-gradient(to bottom, #2EA7DE, #1493D6);
     min-height: 250px;
     padding: 10px 0px 25px 0px;
     font-family: 'Lobs';
@@ -25,7 +25,7 @@ footer {
 
 footer p {
     font-size: 13px;
-    color: rgb(153, 152, 152);
+    color: rgb(255, 255, 255);
     padding-bottom: 0px;
     margin-bottom: 8px;
 }
@@ -46,12 +46,12 @@ footer p {
 }
 
 .footer_ul_amrc li a {
-    color: rgb(153, 152, 152);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 .footer_ul_amrc li a:hover {
-    color: rgb(245, 245, 245);
+    color: rgb(8, 7, 7);
     text-decoration: none;
 }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import swal from'sweetalert2';
 @Component({
   selector: 'app-menu',
   templateUrl: './barra-Navegacion.component.html',
@@ -30,8 +30,11 @@ name: String;
     if (localStorage.getItem('miTokenPersonal')) {
       localStorage.removeItem('miTokenPersonal');
       localStorage.removeItem('nombreUsuario');
-      window.alert("¡¡Has cerrado sesión satisfactoriamente!!")
-        window.location.reload();
+      swal.fire('Has cerrado sesión satisfactoriamente', '', 'success').then(() =>{
+
+          window.location.reload()
+
+      })
     }
   }
 

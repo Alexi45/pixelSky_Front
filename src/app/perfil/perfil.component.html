@@ -92,22 +92,19 @@
           </defs>
 
         <g>
-          <text x="60" y="60">Perfil</text>
+          <text x="60" y="60">Perfil de {{user.name}}</text>
         </g>
         </svg>
-        <div>
+        <div class="baba">
+
             <div id="imagem">
                 <img src="{{user.url}}">
             </div>
-            <div id="conteudo">
-                <ul>
-                    <li>Nombre de jugador: {{user.name}}</li>
-                    <li>Telefono: {{user.phone}}</li>
-                    <li>Ultima Puntuación: {{user.score}}</li>
-                    <li>Email de contacto: {{user.email}}</li>
-                </ul>
-            </div> <button type="button" class="btn btn-success btn-lg btn-block boton-neons" (click)="updateUser(user.id)">Editar Perfil</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block boton-neon" routerLink="/home">Volver atras</button>
+
+
+            <br>
+            <button type="button" class="btn btn-success btn-lg btn-block boton-neon" (click)="updateUser(user.id)">Editar Perfil</button>
+            <button type="button" class="btn btn-danger btn-lg btn-block boton-neons" routerLink="/home">Volver atras</button>
 
         </div>
     </fieldset>
