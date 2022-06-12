@@ -173,3 +173,58 @@ body {
         border-color: #38EDE8;
     }
 }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+svg {
+    display: block;
+    font: 8.5em 'Politica';
+}
+
+p {
+    text-align: center;
+    font-size: 40px;
+}
+
+.text {
+    text-align: center;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #57C3EA;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #06a0dd;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #0a789c;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #0955fa;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #1493D6;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}

@@ -7,12 +7,6 @@
     background-color: black;
 }
 
-body {
-    padding-top: 50px;
-    /* Padding for .navbar-fixed-top. Change value if navbar height changes. Remove if using .navbar-static-top. */
-    color: #959595;
-}
-
 header {
     position: relative;
     width: 100%;
@@ -61,143 +55,6 @@ h6 {
     color: black;
 }
 
-.feature {
-    background: url('D:\ImageLab_FullStack\Image_Lab\src\assets\images\light_bulb.jpg');
-    background-position: top right;
-    background-size: cover;
-    background-color: #dd845a;
-    color: white;
-    text-shadow: 1px 1px 8px black;
-}
-
-.feature .btn {
-    text-shadow: none;
-}
-
-.promo,
-.footer-map {
-    border-width: 1px;
-    border-color: black;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.promo,
-.promo h3,
-.promo a:link,
-.promo a:visited,
-.promo a:hover,
-.promo a:active {
-    color: white;
-    text-shadow: 1px 1px 8px black;
-    text-decoration: none;
-}
-
-.promo-item {
-    height: 200px;
-    line-height: 180px;
-    text-align: center;
-}
-
-.promo-item:hover {
-    background-size: 110%;
-    border: 5px solid black;
-    line-height: 170px;
-}
-
-.promo-item h3 {
-    font-size: 40px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.item-1 {
-    background: url('https://areajugones.sport.es/wp-content/uploads/2015/08/SliderTop6Juegos2D.png');
-}
-
-.item-2 {
-    background: url('D:\ImageLab_FullStack\Image_Lab\src\assets\images\coffee_beans_1.jpg');
-}
-
-.item-3 {
-    background: url('D:\ImageLab_FullStack\Image_Lab\src\assets\images\grapes.jpg');
-}
-
-.item-1,
-.item-2,
-.item-3 {
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.featured-product>img,
-.featured-product>a>img {
-    height: 150px;
-}
-
-.featured-product h3 {
-    color: #dd845a;
-    font-size: 18px;
-}
-
-.featured-product .price {
-    color: #dd845a;
-    font-size: 18px;
-}
-
-.featured-product .price s {
-    color: #999;
-    font-size: 18px;
-}
-
-.footer-map {
-    height: 300px;
-    width: 100%;
-    background: url('D:\ImageLab_FullStack/Image_Lab/src/assets/images/map.jpg');
-    background-size: cover;
-    border-color: #ccc;
-}
-
-.footer-info {
-    padding: 20px 0;
-    background: #f7f7f7;
-}
-
-.footer-info,
-.footer-info a:link,
-.footer-info a:hover,
-.footer-info a:focus,
-.footer-info a:visited {
-    color: #959595;
-}
-
-.footer-info h3 {
-    color: black;
-    font-size: 18px;
-}
-
-.footer-info-item {
-    padding: 0px 20px;
-}
-
-footer .small-print {
-    background-color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-
-/*
-***************************
-Override Bootstrap Classes
-***************************
-*/
-
-
-/* Links */
-
 a {
     color: orange;
     text-decoration: none;
@@ -208,26 +65,6 @@ a:focus {
     color: darkorange;
     text-decoration: underline;
 }
-
-
-/* Navbar */
-
-.navbar-default {
-    background-color: #fff;
-}
-
-.navbar-default .navbar-brand {
-    color: #dd845a;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: sienna;
-    background-color: transparent;
-}
-
-
-/* Primary Buttons */
 
 .btn-primary {
     color: #fff;
@@ -532,9 +369,6 @@ a:hover {
         background: #e1e5ea;
     }
 }
-
-
-/* COLORS */
 
 .postcard .postcard__tagbox .green.play:hover {
     background: #79dd09;

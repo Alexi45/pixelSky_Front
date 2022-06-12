@@ -3,7 +3,6 @@
     background: linear-gradient(to bottom, #57C3EA, #1493D6);
     color: #FFF;
     height: 63px;
-    padding-left: 18px;
     border-radius: 0px;
     border: 1px outset #6D6D6D;
 }
@@ -104,7 +103,7 @@
         position: relative
     }
     #menu ul {
-        background: #111;
+        background: linear-gradient(to bottom, #57C3EA, #1493D6);
         position: absolute;
         top: 100%;
         right: 0;
