@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { NavigationStart, Router } from '@angular/router';
-import { User } from '../clases/user';
+import { User } from '../modelos/user';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -10,18 +10,16 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./scores-users.component.css']
 })
 export class ScoresUsersComponent implements OnInit {
+
   public texto: String
   users: User[] = [];
   public user: User
-  public userForm:FormGroup
-  public loginFailed: boolean = false
   toastr: any;
- name: string;
-  constructor(private loginservice: LoginService, private router: Router) {
-    this.userForm= new FormGroup({name:new FormControl(''),password:new FormControl('')})
-    this.user = new User()
+  name: string;
 
-  }
+  constructor(private loginservice: LoginService, private router: Router) {
+
+    this.user = new User() }
 
     cargarUsuarios(): void {
       this.loginservice.lista().subscribe(
@@ -40,28 +38,12 @@ export class ScoresUsersComponent implements OnInit {
 
     ngOnInit(): void {
   this.cargarUsuarios();
-
       this.router.events.subscribe(event => {
-
-
-
         if (event instanceof NavigationStart) {
-
         }
       })
     }
 
-    dele(id: number) {
-      this.loginservice.delete(id).subscribe(
-        data => {
-
-          this.cargarUsuarios();
-
-
-
-        }
-       ); window.location.reload();
-        }
 
 
 }

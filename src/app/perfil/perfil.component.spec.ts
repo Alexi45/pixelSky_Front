@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { User } from '../modelos/user';
 import { PerfilComponent } from './perfil.component';
 
 describe('PerfilComponent', () => {

@@ -1,35 +1,33 @@
-<div class="contenedor">
-    <nav id='menu'>
-        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-        <ul>
-            <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/home">Home</a></li>
-            <li><a class='dropdown-arrow navbar-brand transition  navbar-center nav fas fa-sign-in'>Perfil</a>
-                <ul class='sub-menus'>
-                    <li id="acceso" *ngIf="miToken == 0">
-                        <a class="navbar-brand transition navbar-center nav fas fa-sign-in" href="/login">Acceder</a>
-                    </li>
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/home">Home</a></li>
+        <li><a class='dropdown-arrow navbar-brand transition  navbar-center nav fas fa-sign-in'>Perfil</a>
+            <ul class='sub-menus'>
+                <li id="acceso" *ngIf="miToken == 0">
+                    <a class="navbar-brand transition navbar-center nav fas fa-sign-in" href="/login">Acceder</a>
+                </li>
 
-                    <li class="nav-item acceso transition" id="acceso" *ngIf="miToken == 0">
-                        <a class="navbar-brand transition navbar-center nav fas fa-sign-in" href="/register">Regístrarse</a>
-                    </li>
+                <li class="nav-item acceso transition" id="acceso" *ngIf="miToken == 0">
+                    <a class="navbar-brand transition navbar-center nav fas fa-sign-in" href="/register">Regístrarse</a>
+                </li>
 
-                    <li class="nav-item acceso transition" id="acceso" *ngIf="miToken != 0">
-                        <a class="navbar-brand transition navbar-center nav fas fa-user" routerLink="/perfilUser"> Perfil</a>
-                    </li>
+                <li class="nav-item acceso transition" id="acceso" *ngIf="miToken != 0">
+                    <a class="navbar-brand transition navbar-center nav fas fa-user" routerLink="/perfilUser"> Perfil</a>
+                </li>
 
-                    <li *ngIf="miToken != 0" class="nav-item acceso transition" id="acceso" (click)="logout()">
-                        <a class="navbar-brand transition  navbar-center nav fas fa-sign-out" routerLink="/home">Cerrar Sesión</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a class='dropdown-arrow navbar-brand transition  navbar-center nav fas fa-sign-in'>Politicas e Información</a>
-                <ul class='sub-menus'>
-                    <li><a class="navbar-brand transition  navbar-center nav fas fa-sign-in" routerLink="/nosotros">¿Quienes somos?</a></li>
-                    <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/informacion">Políticas</a></li>
-                </ul>
-            </li>
-            <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/scores">Puntuaciones de jugadores</a></li>
-            <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" *ngIf="miToken != 0" routerLink="/downloads">Descargas</a></li>
-        </ul>
-    </nav>
-</div>
+                <li *ngIf="miToken != 0" class="nav-item acceso transition" id="acceso" (click)="logout()">
+                    <a class="navbar-brand transition  navbar-center nav fas fa-sign-out" routerLink="/home">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </li>
+        <li><a class='dropdown-arrow navbar-brand transition  navbar-center nav fas fa-sign-in'>Politicas e Información</a>
+            <ul class='sub-menus'>
+                <li><a class="navbar-brand transition  navbar-center nav fas fa-sign-in" routerLink="/nosotros">¿Quienes somos?</a></li>
+                <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/informacion">Políticas</a></li>
+            </ul>
+        </li>
+        <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" routerLink="/scores">Puntuaciones de jugadores</a></li>
+        <li><a class="navbar-brand transition navbar-center nav fas fa-sign-in" *ngIf="miToken != 0" routerLink="/downloads">Descargas</a></li>
+    </ul>
+</nav>

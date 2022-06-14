@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../clases/user';
+
+import { User } from '../modelos/user';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -23,21 +24,10 @@ name:String;
     this.loginService.getUser(this.name).subscribe(
       data => {
         this.user = data;
-
       }
     )
-
     }
-
     updateUser(id: number){
       this.router.navigate(['perfil', id]);
     }
-
-    onUpdate(): void {
-      this.loginService.update(this.id, this.user).subscribe(
-        data => {
-          window.alert("Usuario Actualizado")
-          this.router.navigate(['/listaUsuarios']);
-        }
-        );
-      }}
+}

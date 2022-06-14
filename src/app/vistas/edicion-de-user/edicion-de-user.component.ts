@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
-import { User } from 'src/app/clases/user';
+import { User } from 'src/app/modelos/user';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NgIf } from '@angular/common';
